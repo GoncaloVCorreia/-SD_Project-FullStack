@@ -15,8 +15,8 @@ ScoreDEI is a real-time sports results consultation platform designed to provide
 - Java Persistence API (JPA) for database management;
 - Incorporates RESTful service integration for external sports data, enhancing the platform's data richness and accuracy.
 
-##Environment
-Visual Studio code
+## Environment
+Visual Studio Code
 
 ##Run
 ```
