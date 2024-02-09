@@ -1,0 +1,52 @@
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+<nav class="menu">
+           
+    <div >
+        <i class="fas fa-futbol"></i>
+        <a class="titleMenu" th:href="@{http://localhost:8080/home}" > ScoreDei</a>
+           
+     </div>
+ 
+
+</nav>
+<form th:action="@{/savePlayer}" th:object="${newplayer}" method="post">
+    <div="form-row" id="card">
+        <div class="cardhead">ADD PLAYER </div>
+        <div>
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <div>
+            <label></label>
+            <input type="text" th:field="*{name}" th:placeholder="Name" required>
+        </div>
+        <div>
+            <label style=" color: rgb(191, 191, 191);" for ="ops">Position</label>
+            <select name="op" id="ops" th:field="*{position}">
+                <option value="Goalkeeper">Goalkeeper</option>
+                <option value="Defender">Defender</option>
+                <option value="Midfielder">Midfielder</option>
+                <option value="Attacker">Attacker</option>
+              </select>
+        </div>
+        <div>
+            <label></label>
+            <input type="text" th:field="*{age}" th:placeholder="Age" required>
+        </div>
+        <div>
+            <label style=" color: rgb(191, 191, 191);" for ="team">Team</label>
+            <select name="team" th:field="*{trueTeam}" required>
+				<option th:each="t : ${allTeams}"
+						th:value="${{t}}"
+						th:text="${t.name}">
+					
+				</option>
+			</select>
+        </div>
+        <div>
+            <label></label>
+            <input type="text" th:field="*{image}" th:placeholder="Image" required>
+        </div>
+        <button type="submit">Create/Edit</button>
+    </div>
+</form>

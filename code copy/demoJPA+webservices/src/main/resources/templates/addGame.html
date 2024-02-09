@@ -1,0 +1,52 @@
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+<nav class="menu">
+           
+    <div >
+        <i class="fas fa-futbol"></i>
+        <a class="titleMenu" th:href="@{http://localhost:8080/home}" > ScoreDei</a>
+           
+     </div>
+ 
+
+</nav>
+<form th:action="@{/saveGame}" th:object="${newGame}" method="post">
+    <div="form-row" id="card">
+        <div class="cardhead">ADD GAME </div>
+        <div>
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <div>
+            <label style="color: rgb(191, 191, 191);" for ="team">Team</label>
+            <select  name="team" th:field="*{team1}" required >
+				<option th:each="t : ${allTeams}"
+						th:value="${{t}}"
+						th:text="${t.name}"
+                        >
+                        
+				</option>
+			</select>
+        </div>
+       
+        <div>
+            <label style="color: rgb(191, 191, 191);"  for ="team">Team</label>
+            <select name="team" th:field="*{team2}" required>
+				<option th:each="t : ${allTeams}"
+						th:value="${{t}}"
+						th:text="${t.name}" 
+                    >
+					
+				</option>
+			</select>
+        </div>
+        <div>
+            <label></label>
+            <input type="text" th:field="*{place}" th:placeholder="Place" required>
+        </div>
+        <div>
+            <label></label>
+            <input type="datetime-local" th:field="*{time}" th:placeholder="Time" required>
+        </div>
+        <button type="submit">Create</button>
+    </div>
+</form>

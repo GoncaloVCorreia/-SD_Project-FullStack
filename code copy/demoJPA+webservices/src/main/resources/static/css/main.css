@@ -1,0 +1,145 @@
+html{
+    
+    font-size: 62,5%;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+
+    z-index: 2;
+    font-size: 2em;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    transform: rotate(0eg);
+    text-shadow: 1px 1px hsl(50, 50%, 45%),
+                2px 2px hsl(50, 50%, 40%),
+                3px 3px hsl(50, 50%, 35%),
+                10px 10px 30px rgba(0,0,0,.7);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="text"], input[type="password"], input[type="email"],input[type="datetime-local"], input[type="number"]{
+   
+    background:none;
+   
+    border: none;
+    border-bottom: 0.1rem solid rgb(191, 191, 191);
+   
+    color: rgb(191, 191, 191);
+    outline: none;
+    flex:1;
+    margin-top: 1rem;
+
+}
+input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover,input[type="datetime-local"]:hover{
+    width: 12rem;
+    font-size: 1.0rem;
+    border-color: seagreen;
+}
+button{
+
+    height: 2rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    background:hsl(50, 50%, 45%);
+    cursor: pointer;
+    margin-top: 0.8rem;
+    width: 25%;
+    z-index: 0;
+    border-radius: 10px;
+    background: linear-gradient(to right,#98DE5B,#08E1Ae);
+    margin-bottom: 0.8rem;
+   
+
+}
+a{ text-decoration: none; 
+    color: 10px 10px 30px rgba(0, 30, 180, 0.7);    
+}
+a:visited { text-decoration: none; 
+    color: 10px 10px 30px rgba(0, 30, 180, 0.7);}
+
+a:hover { text-decoration: none;
+    color: 10px 10px 30px rgba(0, 30, 180, 0.7); }
+
+a:active { text-decoration: none; 
+    color: 10px 10px 30px rgba(0, 30, 180, 0.7);}
+button:hover{
+    background: linear-gradient(to right,#98DE5B,#08E1Ae);
+    border-radius: 10px;
+    width: 8rem;
+    font-size: 0.8rem;
+   
+}
+
+table{
+    border: 1px solid;
+    text-align: center;
+    padding: 15px;
+    
+}
+tr,td{
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color: rgb(80, 255, 153);}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+body{
+    background-color: beige;
+}
+form{
+    margin-top: 10rem;
+    display:flex ;
+    flex-direction:column;
+    align-items:center;
+}
+#card{
+    position: relative;
+    margin: 2rem;
+    
+    justify-content: center;
+    
+    text-align: center;
+    width: 20rem;
+    border-radius: 2rem;
+    background: rgb(25,39, 42);
+
+    overflow: hidden;
+}
+.menu{
+    top:0;
+    position: sticky;
+    height: 4rem;
+    background: rgb(25,39, 42);
+    display:flex ;
+    align-items: center;
+    
+    width: 100%;
+}
+.titleMenu{
+    color: beige;
+    margin-left: 1rem;
+
+}
+
+.cardHead{
+    color: beige;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+select{
+    margin-top: 1rem;
+}
+i{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: rgb(191, 191, 191);
+    
+}

@@ -1,0 +1,49 @@
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+<nav class="menu">
+           
+    <div >
+        <i class="fas fa-futbol"></i>
+        <a class="titleMenu" th:href="@{http://localhost:8080/}" > ScoreDei</a>
+           
+     </div>
+ 
+
+</nav>
+<form th:action="@{/saveUser}" th:object="${user}" method="post">
+    <div="form-row" id="card">
+        <div class="cardhead">SIGN UP</div>
+        <div>
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <div>
+            <label></label>
+            <i class="fa fa-user-circle"></i>
+            <input type="text" th:field="*{username}" th:placeholder="Username" required>
+        </div>
+        <div>
+            <label></label>
+            <i class="fa fa-lock"></i>
+            <input type="password" th:field="*{password}" th:placeholder="Password" required>
+        </div>
+        <div>
+            <label></label>
+            <i class="far fa-envelope"></i>
+            <input type="email" th:field="*{email}" th:placeholder="Email" required>
+        </div>
+        <div>
+            <label></label>
+            <i class="fa fa-phone"></i>
+            <input type="text" th:field="*{contact}" pattern= "[0-9]+" th:placeholder="Contact" required>
+        </div>
+        <div>
+            <label style="color: rgb(191, 191, 191);" for ="ops">Admin</label>
+            <select name="op" id="ops" th:field="*{isAdmin}">
+                <option value="true">true</option>
+                <option value="false">false</option>
+              </select>
+        
+        </div>
+        <button type="submit">Sign Up</button>
+    </div>
+</form>

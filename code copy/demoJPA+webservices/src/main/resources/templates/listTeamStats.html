@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TEAMS STATS</title>
+        <meta charset="utf8"/>
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+
+    </head>
+    <body style="display:flex ;flex-direction:column;align-items:center;">
+      <nav class="menu">
+          
+        <div >
+          <i class="fas fa-futbol"></i>
+            <a class="titleMenu" th:href="@{http://localhost:8080/}" > ScoreDei</a>
+               
+         </div>
+     
+    
+    </nav>
+        <h1>Teams Stats</h1>
+        <div >
+          Order By:
+  
+          <a th:href="@{listTeamStats(order=${0})}" style="text-decoration: none; margin-left: 1rem;">Number of Games</a>
+  
+   
+          <a th:href="@{listTeamStats(order=${1})}" style="text-decoration: none; margin-left: 1rem;">  Victories</a>
+         
+         
+          <a th:href="@{listTeamStats(order=${2})}" style="text-decoration: none; margin-left: 1rem;">  Draws</a>
+          
+         
+          <a th:href="@{listTeamStats(order=${3})}" style="text-decoration: none; margin-left: 1rem; ">  Defeats</a>
+        
+                    
+        </div>
+        <table border="2">
+          <tr>
+            <th width="100" height="60">IMAGE</th>
+            <th>NAME</th>
+            <th>Victories</th>
+            <th>Draws</th>
+            <th>Defeats</th>
+            <th>Games Played</th>
+          </tr>
+          <tr th:each="t : ${teams}" >
+            <td>
+              <img th:src="${t.image}" width="50" height="50">
+            </td>
+            <td th:text="${t.name}" >name </td>
+            <td th:text="${t.victories}" >victories </td>
+            <td th:text="${t.draws}" >draws</td>
+            <td th:text="${t.defeats}" >defeats </td>
+            <td th:text="${t.numGames}" >numGames </td>
+           
+            
+    
+          </tr>
+        </table>
+      
+    </body>
+</html>

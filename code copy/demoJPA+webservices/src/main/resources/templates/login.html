@@ -1,0 +1,29 @@
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+<nav class="menu">
+           
+    <div >
+        <i class="fas fa-futbol"></i>
+        <a class="titleMenu" th:href="@{http://localhost:8080/}" > ScoreDei</a>
+           
+     </div>
+ 
+
+</nav>
+<form th:action="@{/verifylogin}" th:object="${user}" method="post">
+    <div="form-row" id="card">
+        <div class="cardhead">LOGIN </div>
+        <div>
+            <label></label>
+            <i class="fa fa-user-circle"></i>
+            <input type="text" th:field="*{username}" th:placeholder="Username" required>
+        </div>
+        <div>
+            <label></label>
+            <i class="fas fa-lock"></i>
+            <input type="password" th:field="*{password}" th:placeholder="Password" required>
+        </div>
+
+        <button type="submit">Login</button>
+    </div>
+</form>

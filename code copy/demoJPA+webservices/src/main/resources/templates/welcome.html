@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="utf8"/>
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    </head>
+    <body>
+        <nav class="menu">
+           
+           <div >
+               
+                <i class="fas fa-futbol"></i>
+              
+            
+               <a class="titleMenu" th:href="@{http://localhost:8080/}" > ScoreDei</a>
+                  
+            </div>
+        
+
+       </nav>
+
+        <h1 style="display:flex ;flex-direction:column;align-items:center;">Welcome</h1>
+        <div class="flex" style="display:flex ;flex-direction:column;align-items:center;margin-top:15rem" >
+            <button style="cursor:pointer;border-radius: 2.4rem;height: 2rem;font-weight:900;">
+            <a th:href="@{http://localhost:8080/login}" style="text-decoration: none;">Login here </a>
+            </button>
+            <button  style="cursor:pointer;border-radius: 2.4rem;height: 2rem;font-weight:900;">
+            <a th:href="@{http://localhost:8080/createUser}" style="text-decoration: none;">Sign Up here </a>
+            </button>
+            <button  style="cursor:pointer;border-radius: 2.4rem;height: 2rem;font-weight:900;  " >
+            <a th:href="@{http://localhost:8080/guest}" style="text-decoration: none; ">Continue as a Guest</a>
+            </button>
+        </div>
+
+    </body>
+</html>

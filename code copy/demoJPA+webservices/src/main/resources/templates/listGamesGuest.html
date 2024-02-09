@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Games</title>
+        <meta charset="utf8"/>
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    </head>
+    <body style="display:flex ;flex-direction:column;align-items:center;">
+      <nav class="menu">
+           
+        <div >
+           <i class="fas fa-futbol"></i>
+            <a class="titleMenu" th:href="@{http://localhost:8080/}" > ScoreDei</a>
+               
+         </div>
+     
+    
+    </nav>
+        <h1>Ended Games</h1>
+  
+        <table border="1">
+          <tr>
+          
+            <th>Location</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Final Result</th>
+
+          </tr>
+          <tr th:each="g : ${EndGames}" >
+           
+            <td th:text="${g.place}" >place</td>
+            <td th:text="${g.team1.name}" >team 1</td>
+            <td th:text="${g.team2.name}">team 2</td>
+            <td th:text="${g.t1Goals +'  -  '+g.t2Goals}" >Result</td>
+            <td><a th:href="@{listEventsForGameId(id=${g.id})}"> See Game Events</a></td>
+          </tr>
+        </table>
+
+        <h1>Upcoming Games</h1>
+  
+        <table border="1">
+          <tr>
+           
+            <th>Location</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Start</th>
+          </tr>
+          <tr th:each="g : ${BeginGames}" >
+           
+            <td th:text="${g.place}" >place</td>
+            <td th:text="${g.team1.name}" >team 1</td>
+            <td th:text="${g.team2.name}">team 2</td>
+            <td th:text="${g.time}">Time</td>
+
+            
+          </tr>
+        </table>
+
+        <h1>Current Games</h1>
+  
+        <table border="1">
+          <tr>
+           
+            <th>Location</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Current Result</th>
+            <th>Current Time</th>
+          </tr>
+          <tr th:each="g : ${CurrGames}" >
+            
+            <td th:text="${g.place}" >place</td>
+            <td th:text="${g.team1.name}" >team 1</td>
+            <td th:text="${g.team2.name}">team 2</td>
+            <td th:text="${g.t1Goals +'  -  '+g.t2Goals}" >Result</td>
+            <td th:text="${g.currentGameTime}" >Result</td>
+            <td><a th:href="@{listEventsForGameId(id=${g.id})}"> See Game Events</a></td>
+          </tr>
+        </table>
+      
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TEAMS</title>
+        <meta charset="utf8"/>
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    </head>
+    <body style="display:flex ;flex-direction:column;align-items:center;">
+      <nav class="menu">
+           
+        <div >
+          <i class="fas fa-futbol"></i>
+            <a class="titleMenu" th:href="@{http://localhost:8080/}" > ScoreDei</a>
+               
+         </div>
+     
+    
+    </nav>
+        <h1>
+            Squad 
+            <h2 th:text="${team}"></h2>
+        </h1>
+  
+        <table border="2">
+          <tr>
+            <th>NAME</th>
+            <th>POSITION</th>
+            <th>PHOTO</th>
+            <th>EDIT</th>
+            
+          </tr>
+          <tr th:each="p : ${players}" >
+            <td th:text="${p.name}">name</td>
+            <td th:text="${p.position}" >position</td>
+            <td>
+                <img th:src="${p.image}" width="50" height="50">
+            </td>
+            <td><a th:href="@{editPlayer(id=${p.id})}"> Edit Player</a></td>
+          </tr>
+        </table>
+      
+    </body>
+</html>

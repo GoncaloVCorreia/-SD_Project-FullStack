@@ -1,0 +1,40 @@
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+<nav class="menu">
+           
+    <div >
+        <i class="fas fa-futbol"></i>
+        <a class="titleMenu" th:href="@{http://localhost:8080/}" > ScoreDei</a>
+           
+     </div>
+ 
+
+</nav>
+<form th:action="@{/saveGEvent}" th:object="${newEvent}" method="post">
+    <div="form-row" id="card">
+        <div class="cardhead">ADD EVENT</div>
+        <div>
+            <input type="hidden" th:value = "aux" th:field="*{game}">
+        </div>
+        <div>
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <div>
+            <label for ="ops"></label>
+            <select name="op" id="ops" th:field="*{eventType}">
+                <option value="begin">Begin Game</option>
+                <option value="interrupt">Interrupt Game</option>
+                <option value="resume">Resume Game</option>
+                <option value="end">End Game</option>
+              </select>
+        </div>
+        <div>
+            <label></label>
+            <input type="text" th:field="*{time}" pattern= "[0-9]*:[0-9]*" placeholder="(min:sec)" required>
+        </div>
+       
+        
+    
+        <button type="submit">Create</button>
+    </div>
+</form>
