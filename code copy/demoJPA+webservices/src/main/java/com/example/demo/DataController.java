@@ -110,7 +110,7 @@ public class DataController {
         // set `Content-Type` and `Accept` headers
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));   
-        headers.set("x-apisports-key", "966de6a81d04b6cd73b83fe7c00bb72d");
+        headers.set("your_name", "your_key");
 
         //Create a new HttpEntity
         HttpEntity request= new HttpEntity(headers);
