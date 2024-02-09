@@ -1,8 +1,9 @@
-Correr código sem javadoc
+Running Code without Javadoc:
 
-1. Instalar docker desktop
-2. Abrir pasta code copy no Visual Studio 
-3. Abrir num container
-4. Após container estar a correr abrir um novo terminal JavaScript Debug terminal
-5. Mudar para a diretoria demoJPA+webservices
-6. executar o comando ./mvnw spring-boot:run
+    Install Docker Desktop.
+    Open the "src" folder in Visual Studio.
+    Open it in a container.
+    After the container is running, open a new JavaScript Debug terminal.
+    Change to the directory "demoJPA+webservices".
+    Execute the command ./mvnw spring-boot:run.
+
