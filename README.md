@@ -2,7 +2,7 @@
 Distributed Systems
 
 ## Project Overview
-ScoreDEI is a real-time sports results consultation platform designed to provide users with updates on ongoing games. It aims to become a reference platform for football game data and statistics.
+The scoreDEI is a platform for consulting real-time sports results. This project consists of implementing a platform where users can consult and receive updates on sports results from ongoing games. 
 
 ## Key Features
 - **Web Interface**: Split interface for general users and admins.
